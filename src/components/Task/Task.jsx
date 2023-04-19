@@ -20,11 +20,10 @@ const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }) => {
                     onClick={() => onArchiveTask(id)}
                 />
             </label>
-            <label htmlFor="title" aria-label={title}>
+            <label htmlFor="title" aria-label={title} className="title">
                 <input
                     type="text"
                     name="title"
-                    id="title"
                     value={title}
                     readOnly
                     placeholder="Input title"
