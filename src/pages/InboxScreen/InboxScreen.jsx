@@ -12,10 +12,11 @@ const InboxScreen = () => {
 
     // The useEffect triggers the data fetching when the component is mounted
     useEffect(() => {
-        dispatch(fetchTasks);
+        dispatch(fetchTasks());
     }, []);
 
     if (error) {
+        console.log(error);
         return <Error />
     }
 

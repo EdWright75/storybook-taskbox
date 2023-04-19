@@ -17,7 +17,7 @@ const TaskList = (/*{ loading, tasks, onPinTask, onArchiveTask }*/) => {
         ];
         // Change arguments to match new functions
         // const tasksList = tasksInOrder.map(task => <Task key={task.id} task={task} {...events} />);
-        const tasksList = tasksInOrder.map(task => (
+        const tasksList = tasksInOrder?.map(task => (
             <Task key={task.id} task={task} onPinTask={task => pinTask(task)} onArchiveTask={task => archiveTask(task)} />
         ));
         return tasksList;
